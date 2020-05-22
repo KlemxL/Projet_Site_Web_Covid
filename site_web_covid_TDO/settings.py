@@ -125,7 +125,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/home/CreateurCOV/Projet_Site_Web_Covid/static'
+
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
 LOGIN_REDIRECT_URL='blog-home'
 LOGIN_URL ='login'
+
+
+
