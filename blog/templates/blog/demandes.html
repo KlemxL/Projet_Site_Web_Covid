@@ -1,0 +1,70 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+
+<h1>Interface des demandes</h1>
+    
+    
+    <interfaceCitoyens>
+        <br><br>
+        <legend class="border-bottom mb-4"><h2>Interface Citoyens</h2></legend>
+        
+        <p> Vous pouvez ici commander des produits de premières nécessités qui seront livrer à votre adresse de livraison entre 3 à 7 jours. <p>
+        <p> Veuillez saisir vos demandes ci-dessous. <p>
+        <p> Pour les besoins particuliers (allergie, demande de santé spécifique, …) veuillez remplir le formulaire spéciale en cliquant ici. <p>
+
+        
+        <div class="content-section">
+        
+        <form method="POST">
+        
+            {% csrf_token %}
+            
+            <fieldset class="form-group">
+            
+                <legend class="border-bottom mb-4">Votre commande : </legend>
+                
+                <p> Voici les produits disponibles : <p>
+                <p> Les prix sont donnés selon l'unité du produits. <p>
+                <p> Les quantités sont données selon le nombre de membres de le foyer. <p>
+                
+                <br/>
+                
+                {{ form|crispy }}
+                
+                
+                <br/>
+                
+                <p> Une fois votre commande terminé, cliquez sur commander. Les produits seront livrés à l'adresse enregistrée dans votre profil. <p>
+                <p> Attention, si aucune adresse de livraison est référencée, votre commande n'arrivera pas à destination et sera redistribuée. <p>
+
+                {{ form_p|crispy }}
+                
+            </fieldset>
+            
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Commander</button>
+            </div>
+            
+        </form>
+        
+        </div>
+        
+        <footer>
+            <p> © 2020 COVID-19</p>
+        </footer>
+        
+    </interfaceCitoyens>
+    
+{% endblock content %}
+ 
+
+
+
+  
+
+ 
+  

@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<h1>
+		Profil
+	</h1>
+	<div class="border-top pt-3">
+					<div class="content-section">
+					  <div class="media">
+						<img class="rounded-circle account-img" src="{{ user.profile.image.url }}"></div>	
+						<div class="media-body">
+						  <h3 >{{ user.first_name }} {{ user.last_name }}</h3>
+						  <p class="text-secondary"><strong>Mail : </strong>{{ user.email }}</p>
+						  <p class="text-secondary"><strong>Username : </strong>{{ user.username }}</p>
+						</div>
+					  </div>
+					  <small class="text-muted">
+						Modifiez votre profil<a href="/profile/edit">Editez votre profil</a>
+					   </small>
+					</div>
+	</div>
+	<h3>
+		Informations Personnelles
+	</h3>
+	<div class="border-top pt-3">
+					  <div class="content-section">
+						<div class="media-body">
+						  <p class="text-secondary"><strong>Adresse : </strong>{{ user.profile.numero }} {{ user.profile.rue }} </p>
+						  <p class="text-secondary"><strong>CP : </strong>{{ user.profile.codeP }}</p>
+						</div>
+					  </div>
+  	</div>
+{%endblock content %}

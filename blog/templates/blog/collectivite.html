@@ -1,0 +1,36 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+
+
+<h1>Collectivite</h1>
+    
+    <interfaceCitoyens>
+        <br><br>
+
+        <p class="text-secondary"><strong>Nombre De commande effectué : </strong>{{ nbcommande}}</p>
+        
+        <!--
+        {% for c in commandes %}
+                <li>{{ c.produitChoisis }}</li>
+
+        {% endfor %}
+    	
+        <p class="text-secondary"><strong>Produit le plus commandé : </strong>{{ commande.produitChoisis }}</p>
+        -->
+        <p class="text-secondary"><strong>Liste des produits à commander : </strong></p>
+
+        {% for s in somme %}
+                
+                <p class="text-secondary">{{ s.produitChoisis__nom }}&emsp; quantité:  {{ s.quantite__sum }} unité(s)</p>
+                <!-- &emsp; permet de créer un espace quadruple-->
+                
+
+        {% endfor %}
+  
+    </Collectivite>
+    
+{% endblock content %}
+ 
+  

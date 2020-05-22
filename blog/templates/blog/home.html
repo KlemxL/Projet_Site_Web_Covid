@@ -1,0 +1,52 @@
+
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+     <br>
+        <h2 >Informations </h2><br>
+        <h4 class= "border-bottom mb-4">Vidéos de prévention</h4>
+        <div class="content-section">
+            <div class="media">
+                
+                <div class="media-body">
+                    <a href="https://www.youtube.com/watch?v=9Ay4u7OYOhA">
+                        <img  style="height: 85px; width: 85px; margin-right: 20px; "class="rounded-circle"  src= "{%static 'blog/images/play.PNG' %}"/></a>Video <strong>COVID-19</strong> : gestes importants 
+
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="media">
+                
+                <div class="media-body">
+                    <a href="https://www.youtube.com/watch?v=qPoptbtBjkg">
+                        <img  style="height: 85px; width: 85px; margin-right: 20px; "class="rounded-circle"  src= "{%static 'blog/images/play.PNG' %}"/></a>Video <strong>COVID-19</strong> : Astuces pour lutter en restant chez soi 
+                        
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <br>
+        
+        <article>
+            <h4 class= "border-bottom mb-4">Articles sur le déconfinement</h4><br>
+            <small>
+                <a href="https://www.lemonde.fr/idees/article/2020/04/23/coronavirus-le-modele-francais-a-l-epreuve-du-deconfinement_6037531_3232.html">Le monde : Déconfinement français</a>
+            </small>  
+        </article>
+    
+        <figure>
+            <img src= "{%static 'blog/images/carte.PNG' %}" height="244" width="492" alt="Carte du déconfinement français" border="1" align="center" />
+        </figure>
+    <br>
+   </main>
+   
+   <br>
+    
+    <footer>
+        <p>© 2020 COVID-19</p>
+    </footer>
+{% endblock content %}
+  
