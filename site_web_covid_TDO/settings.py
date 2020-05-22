@@ -25,7 +25,7 @@ SECRET_KEY = 'gxo5#jn%+7u&64l!%h=uci4@fzok^f$0xapp&@(qpf9o77ba-%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['createurcov.pythonanywhere.com']
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -129,6 +129,3 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 
 LOGIN_REDIRECT_URL='blog-home'
 LOGIN_URL ='login'
-
-
-
